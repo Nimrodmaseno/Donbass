@@ -666,9 +666,9 @@ form.onsubmit = async (e)=>{
 
   // 🚫 Check age
   const age = calculateAge(dob);
-  if(age < 20){
+  if(age < 18){
       error.style.display="block";
-      error.innerHTML = "You must be at least 20 years old.";
+      error.innerHTML = "You must be at least 18 years old.";
       return;
   }
 
