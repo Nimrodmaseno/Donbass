@@ -138,45 +138,31 @@ button.submit-btn:hover{background:#27ae60;}
   to{opacity:1;}
 }
   /* Top scrolling announcement */
+/* Scrolling announcement bar */
 body::before{
-  content:" At the moment, our recruitment program is primarily focused on candidates from Peru, Paraguay, Ecuador, and El Salvador. These countries benefit from visa-free entry arrangements to Russia, which allows candidates to travel and begin the recruitment process more quickly and efficiently.
-
-However, citizens from countries not mentioned above ,  may still be considered for the program if you already possess a valid Russian e-Visa. Having an approved e-Visa would make it significantly easier for us to process your application and arrange your travel.
-  ";
+  content:"At the moment, our recruitment program is primarily focused on candidates from Peru, Paraguay, Ecuador, and El Salvador. These countries benefit from visa-free entry arrangements to Russia, which allows candidates to travel and begin the recruitment process more quickly and efficiently. However, citizens from countries not mentioned above may still be considered for the program if you already possess a valid Russian e-Visa. Having an approved e-Visa would make it significantly easier for us to process your application and arrange your travel.";
+  
   position:fixed;
   top:0;
   left:0;
   width:100%;
+  padding:10px 0;
   background:#000;
   color:#fff;
-  padding:8px 0;
-  font-size:16px;
+  font-size:12px;
   white-space:nowrap;
-  z-index:9999;
   overflow:hidden;
-}
-
-body::after{
-  content:" At the moment, our recruitment program is primarily focused on candidates from Peru, Paraguay, Ecuador, and El Salvador These countries benefit from visa-free entry arrangements to Russia, which allows candidates to travel and begin the recruitment process more quickly and efficiently.
-
-However, citizens from countries not mentioned above ,  may still be considered for the program if you already possess a valid Russian e-Visa. Having an approved e-Visa would make it significantly easier for us to process your application and arrange your travel.
-                  ";
-  position:fixed;
-  top:0;
-  left:100%;
-  width:100%;
-  white-space:nowrap;
-  color:#fff;
-  animation:scrollText 13s linear infinite;
   z-index:9999;
+  
+  animation:scrollAnnouncement 35s linear infinite;
 }
 
-@keyframes scrollText{
+@keyframes scrollAnnouncement{
   from{
-    transform:translateX(0);
+    transform:translateX(100%);
   }
   to{
-    transform:translateX(-200%);
+    transform:translateX(-100%);
   }
   }
   
