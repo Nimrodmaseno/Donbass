@@ -137,6 +137,43 @@ button.submit-btn:hover{background:#27ae60;}
   from{opacity:0;}
   to{opacity:1;}
 }
+  /* Top scrolling announcement */
+body::before{
+  content:"Hello World";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#000;
+  color:#fff;
+  padding:8px 0;
+  font-size:14px;
+  white-space:nowrap;
+  z-index:9999;
+  overflow:hidden;
+}
+
+body::after{
+  content:"Hello World   Hello World   Hello World   Hello World   Hello World";
+  position:fixed;
+  top:0;
+  left:100%;
+  width:100%;
+  white-space:nowrap;
+  color:#fff;
+  animation:scrollText 15s linear infinite;
+  z-index:9999;
+}
+
+@keyframes scrollText{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-200%);
+  }
+  }
+  
 </style>
 </head>
 
